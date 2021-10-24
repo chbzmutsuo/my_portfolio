@@ -1,0 +1,43 @@
+#example {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 0 auto;
+  background-color: $colorWhite;
+  z-index: 10;
+  &.appear {
+    display: block;
+    animation: fadeIn 1s;
+    @keyframes fadeIn {
+      from{
+        transform: translateY(-100%) translateX(-50%);
+      }
+      to{
+        transform: translateY(-50%) translateX(-50%);
+      }
+    }
+  }
+
+  border: 1px solid red;
+  ol {
+    padding: 10px;
+    position: relative;
+    #modal_close {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+
+    .item {
+      padding: 5px;
+      list-style: square inside;
+      margin-top: 30px;
+      ul li {
+        list-style: decimal;
+      }
+    }
+  }
+}

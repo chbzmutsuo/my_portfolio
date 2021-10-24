@@ -1,0 +1,36 @@
+*{
+  font-size: 18px;
+}
+
+.responsive-flex{
+  flex-direction: column;
+}
+.contentWidth {
+  width: 90%;
+  margin: 0 5% auto;
+}
+
+
+.skill-description{
+  width: 100%;
+  margin: 20px auto;
+  line-height: 35px;
+  font-size: larger;
+}
+.skill-img{
+  padding:0;
+  margin: auto;
+  img{
+    // height: 300px;
+    width: 400px;
+  }
+}
+
+.skill-name{
+  span{
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+}

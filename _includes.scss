@@ -1,0 +1,50 @@
+$ColorBase: #363636;
+$CProfile: #d7ad10;
+$BaseCol: rgb(46, 46, 46);
+$colorWhite: rgba(232, 232, 232, 1);
+
+
+
+a.cp_btn {
+  border-radius: 20px;
+  font-size: 15px;
+  display: block;
+  position: relative;
+  width: 160px;
+  padding: 0.4em;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid $BaseCol;
+  background: $BaseCol;
+  overflow: hidden;
+  z-index: 1 !important;
+}
+a.cp_btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 100%;
+  background: #fff;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transition: 0.3s;
+  z-index: -1;
+}
+a.cp_btn:hover {
+  color: $ColorBase;
+  font-weight: bolder;
+}
+a.cp_btn:hover:after {
+  height: 250%;
+  opacity: 1;
+}
+a.cp_btn:active:after {
+  height: 350%;
+  opacity: 1;
+}
+
+
+
