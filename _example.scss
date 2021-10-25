@@ -21,7 +21,7 @@
     }
   }
 
-  border: 1px solid red;
+  border: 1px solid black;
   ol {
     padding: 10px;
     position: relative;
@@ -32,11 +32,13 @@
     }
 
     .item {
+      font-size: .9rem;
       padding: 5px;
       list-style: square inside;
       margin-top: 30px;
       ul li {
         list-style: decimal;
+        font-size: .8rem;
       }
     }
   }

@@ -57,7 +57,7 @@ a.cp_btn:active:after {
   margin: 0 auto;
   background-color: #e8e8e8;
   z-index: 10;
-  border: 1px solid red;
+  border: 1px solid black;
 }
 
 #example.appear {
@@ -100,6 +100,7 @@ a.cp_btn:active:after {
 }
 
 #example ol .item {
+  font-size: .9rem;
   padding: 5px;
   list-style: square inside;
   margin-top: 30px;
@@ -107,6 +108,7 @@ a.cp_btn:active:after {
 
 #example ol .item ul li {
   list-style: decimal;
+  font-size: .8rem;
 }
 
 * {
@@ -1025,6 +1027,10 @@ header .mainCopy h1 span {
   text-align: center;
 }
 
+.about .table tr td:nth-child(1) {
+  width: 80px;
+}
+
 .about .info-right {
   margin: 0 auto;
   width: 100%;
@@ -1088,7 +1094,7 @@ header .mainCopy h1 span {
     font-size: larger;
   }
   .skill-img {
-    padding: 0;
+    padding: 0 !important;
     margin: auto;
   }
   .skill-img img {
@@ -1112,11 +1118,22 @@ header .mainCopy h1 span {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .navMenu ul {
+    float: none;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .navMenu ul li a {
+    font-size: 18px;
+  }
   .work-img {
     height: 300px;
   }
   .work-img img {
     height: 300px;
+  }
+  .section-heading {
+    font-size: 1.5rem;
   }
   .skill-description {
     width: 100%;
@@ -1141,6 +1158,31 @@ header .mainCopy h1 span {
   }
   header .header-img {
     height: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  * {
+    font-size: 14px;
+  }
+  .contentWidth, #container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .skills .skill-wrapper .each-skill dd {
+    display: block;
+  }
+  .skills .skill-wrapper .each-skill dd .skill-img {
+    max-width: 300px;
+  }
+  .skill-img img {
+    width: 100%;
+  }
+  .info-left .table td {
+    font-size: 10px;
+  }
+  .info-right ul li {
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
