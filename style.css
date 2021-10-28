@@ -388,6 +388,7 @@ header .mainCopy h1 span {
   margin-bottom: 30px;
   overflow: hidden;
   max-width: 750px;
+  position: relative;
 }
 
 .works .works-wrapper li .cp_btn {
@@ -406,6 +407,7 @@ header .mainCopy h1 span {
   max-height: 550px;
   max-width: 750px;
   margin: 0 auto;
+  border-radius: 20px;
   -webkit-box-shadow: 10px 10px 10px darkgrey;
           box-shadow: 10px 10px 10px darkgrey;
 }
@@ -422,19 +424,19 @@ header .mainCopy h1 span {
   display: inline;
 }
 
-.works .works-wrapper li a .work-img h3 {
+.works .works-wrapper li a .work-img .work-title {
   display: inline;
   width: 100%;
   top: 0;
   left: 0;
   position: absolute;
   font-size: 1.5rem;
-  background-color: #d7ad10;
   color: white;
   font-weight: bold;
   margin: 0;
   opacity: 0;
   z-index: 10;
+  background-color: #d7ad10;
 }
 
 .works .works-wrapper li a .box {
@@ -459,7 +461,7 @@ header .mainCopy h1 span {
   transition: 0.7s;
 }
 
-.works .works-wrapper li a.inview .work-img h3 {
+.works .works-wrapper li a.inview .work-img .work-title {
   -webkit-animation-name: left_to_right;
           animation-name: left_to_right;
   -webkit-animation-delay: 0.7s;
@@ -521,247 +523,228 @@ header .mainCopy h1 span {
 .works .works-wrapper li a.inview p span:nth-child(1) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(2) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(3) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 0.9s;
-          transition-delay: 0.9s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(4) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 1.2s;
-          transition-delay: 1.2s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(5) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 1.5s;
-          transition-delay: 1.5s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 2.5s;
+          transition-delay: 2.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(6) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 1.8s;
-          transition-delay: 1.8s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(7) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 2.1s;
-          transition-delay: 2.1s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 3.5s;
+          transition-delay: 3.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(8) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 2.4s;
-          transition-delay: 2.4s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(9) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 2.7s;
-          transition-delay: 2.7s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 4.5s;
+          transition-delay: 4.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(10) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 3s;
-          transition-delay: 3s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(11) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 3.3s;
-          transition-delay: 3.3s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 5.5s;
+          transition-delay: 5.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(12) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 3.6s;
-          transition-delay: 3.6s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 6s;
+          transition-delay: 6s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(13) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 3.9s;
-          transition-delay: 3.9s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 6.5s;
+          transition-delay: 6.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(14) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 4.2s;
-          transition-delay: 4.2s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 7s;
+          transition-delay: 7s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(15) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 4.5s;
-          transition-delay: 4.5s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 7.5s;
+          transition-delay: 7.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(16) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 4.8s;
-          transition-delay: 4.8s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 8s;
+          transition-delay: 8s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(17) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 5.1s;
-          transition-delay: 5.1s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 8.5s;
+          transition-delay: 8.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(18) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 5.4s;
-          transition-delay: 5.4s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 9s;
+          transition-delay: 9s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
 .works .works-wrapper li a.inview p span:nth-child(19) {
   color: red;
   display: inline-block;
-  -webkit-transition-delay: 5.7s;
-          transition-delay: 5.7s;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-delay: 9.5s;
+          transition-delay: 9.5s;
+  -webkit-transition-duration: 1.3s;
+          transition-duration: 1.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -1071,20 +1054,22 @@ header .mainCopy h1 span {
 }
 
 .contact dl {
-  width: 350px;
+  width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .contact dl dt {
-  width: 40%;
+  width: 30%;
 }
 
 .contact dl dd {
-  width: 60%;
+  width: 70%;
   margin: 0;
 }
 
