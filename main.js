@@ -1,5 +1,33 @@
-//スムーススクロール
+// click to gif-------------
+let gif_switchers = document.querySelectorAll(".gif_switcher");
+console.log(gif_switchers);
 
+const obj = {}
+
+gif_switchers.forEach((gif) => {
+  // obj["png"] =gif.src
+  // obj["gif"]=String(gif.src).replace("png","gif");
+  // obj["file_name"] = gif.src.slice(0, -3);
+  // console.log(obj)
+  gif.addEventListener("mouseenter", function () {
+    const height = this.height;
+    // alert(height)
+    const file_name = String(this.src).slice(0, -3);
+    const png = `${file_name}png`
+    const gif = `${file_name}gif`
+    this.src = gif
+    this.height = height + 8;
+  });
+
+  gif.addEventListener("mouseout", function () {
+    const file_name = String(this.src).slice(0, -3);
+    const png = `${file_name}png`
+    const gif = `${file_name}gif`
+    this.src = png
+  });
+});
+
+//スムーススクロール----------------------------
 //クリックイベントを追加するボタン
 let nav_items = ["top", "works", "skills", "history", "contact"];
 
@@ -26,9 +54,14 @@ nav_items.forEach((item) => {
     });
   };
 });
+//スムーススクロール----------------------------
 
-//スクロールオブザーバー
+/**
+ * scroll animation
+ * .io_animationクラスのものにinviewがつく
+ */
 
+//実行関数
 const cb = function (entries, observer) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
@@ -38,6 +71,7 @@ const cb = function (entries, observer) {
     }
   });
 };
+
 let io = new IntersectionObserver(cb);
 
 let io_animations = document.querySelectorAll(".io_animation");
@@ -49,22 +83,20 @@ io_animations.forEach((element) => {
 //モーダルopen/close
 let modal = document.querySelector("#example");
 
-let modal_close =document.querySelector("#modal_close");
+let modal_close = document.querySelector("#modal_close");
 let modal_open = document.querySelector("#modal_open");
 let container = document.querySelector("#global-container");
 
-modal_open.addEventListener("click",()=>{
-  modal.classList.toggle("appear")
+modal_open.addEventListener("click", () => {
+  modal.classList.toggle("appear");
   container.style = "opacity:0.3";
   // container.style = "opacity:0.7";
-})
+});
 
-modal_close.addEventListener("click",()=>{
+modal_close.addEventListener("click", () => {
   modal.classList.toggle("appear");
   container.style = "opacity:1";
-})
-
-
+});
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   const el = document.querySelector("#works");
@@ -78,5 +110,3 @@ modal_close.addEventListener("click",()=>{
 //   console.log(concatStr);
 //   el.innerHTML = concatStr;
 // });
-
-

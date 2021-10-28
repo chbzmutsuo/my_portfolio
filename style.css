@@ -161,7 +161,7 @@ a:hover {
   margin-bottom: 100px;
 }
 
-.responsive-flex, .works .works-wrapper li a .flex-box, .skills .skill-wrapper .each-skill dd, .about .flex-box {
+.responsive-flex, .skills .skill-wrapper .each-skill dd, .about .flex-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,7 +182,7 @@ a:hover {
 }
 
 #nav_top {
-  opacity: .5;
+  opacity: 0.7;
   cursor: pointer;
   text-align: center;
   position: fixed;
@@ -382,10 +382,12 @@ header .mainCopy h1 span {
 .works .works-wrapper li {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  border: 2px groove darkgrey;
+  border: 1px solid darkgrey;
   padding: 2%;
+  margin: auto;
   margin-bottom: 30px;
   overflow: hidden;
+  max-width: 750px;
 }
 
 .works .works-wrapper li .cp_btn {
@@ -399,25 +401,31 @@ header .mainCopy h1 span {
 }
 
 .works .works-wrapper li a .work-img {
-  max-height: 400px;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
   position: relative;
   overflow: hidden;
-  border: 1px double darkgrey;
+  max-height: 550px;
+  max-width: 750px;
+  margin: 0 auto;
+  -webkit-box-shadow: 10px 10px 10px darkgrey;
+          box-shadow: 10px 10px 10px darkgrey;
+}
+
+.works .works-wrapper li a .work-img:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .works .works-wrapper li a .work-img img {
-  height: 100%;
   padding: 4px;
-  -webkit-box-shadow: 5px 5px 5px darkgrey;
-          box-shadow: 5px 5px 5px darkgrey;
+  vertical-align: middle;
+  display: inline;
 }
 
 .works .works-wrapper li a .work-img h3 {
   display: inline;
   width: 100%;
-  top: 50%;
+  top: 0;
   left: 0;
   position: absolute;
   font-size: 1.5rem;
@@ -441,30 +449,32 @@ header .mainCopy h1 span {
 
 .works .works-wrapper li a p {
   padding: 0 20px;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  text-align: left;
+  font-size: 0.8rem;
 }
 
-.works .works-wrapper li a:hover .work-img img {
+.works .works-wrapper li a.inview .work-img img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
-.works .works-wrapper li a:hover .work-img h3 {
-  opacity: 1;
+.works .works-wrapper li a.inview .work-img h3 {
   -webkit-animation-name: left_to_right;
           animation-name: left_to_right;
-  -webkit-animation-duration: 0.9s;
-          animation-duration: 0.9s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 @-webkit-keyframes left_to_right {
   from {
+    opacity: 1;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
@@ -472,14 +482,19 @@ header .mainCopy h1 span {
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
   }
-  to {
+  70% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    top: 0;
   }
 }
 
 @keyframes left_to_right {
   from {
+    opacity: 1;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
@@ -487,23 +502,23 @@ header .mainCopy h1 span {
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
   }
-  to {
+  70% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  to {
+    opacity: 1;
+    top: 0;
+  }
 }
 
-.works .works-wrapper li a:hover .work-img .box {
-  display: block;
-}
-
-.works .works-wrapper li a:hover p {
+.works .works-wrapper li a.inview p {
   opacity: 0.7;
   cursor: pointer;
   font-size: 1rem;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(1) {
+.works .works-wrapper li a.inview p span:nth-child(1) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 0.3s;
@@ -516,7 +531,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(2) {
+.works .works-wrapper li a.inview p span:nth-child(2) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 0.6s;
@@ -529,7 +544,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(3) {
+.works .works-wrapper li a.inview p span:nth-child(3) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 0.9s;
@@ -542,7 +557,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(4) {
+.works .works-wrapper li a.inview p span:nth-child(4) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 1.2s;
@@ -555,7 +570,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(5) {
+.works .works-wrapper li a.inview p span:nth-child(5) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 1.5s;
@@ -568,7 +583,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(6) {
+.works .works-wrapper li a.inview p span:nth-child(6) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 1.8s;
@@ -581,7 +596,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(7) {
+.works .works-wrapper li a.inview p span:nth-child(7) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 2.1s;
@@ -594,7 +609,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(8) {
+.works .works-wrapper li a.inview p span:nth-child(8) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 2.4s;
@@ -607,7 +622,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(9) {
+.works .works-wrapper li a.inview p span:nth-child(9) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 2.7s;
@@ -620,7 +635,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(10) {
+.works .works-wrapper li a.inview p span:nth-child(10) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 3s;
@@ -633,7 +648,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(11) {
+.works .works-wrapper li a.inview p span:nth-child(11) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 3.3s;
@@ -646,7 +661,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(12) {
+.works .works-wrapper li a.inview p span:nth-child(12) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 3.6s;
@@ -659,7 +674,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(13) {
+.works .works-wrapper li a.inview p span:nth-child(13) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 3.9s;
@@ -672,7 +687,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(14) {
+.works .works-wrapper li a.inview p span:nth-child(14) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 4.2s;
@@ -685,7 +700,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(15) {
+.works .works-wrapper li a.inview p span:nth-child(15) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 4.5s;
@@ -698,7 +713,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(16) {
+.works .works-wrapper li a.inview p span:nth-child(16) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 4.8s;
@@ -711,7 +726,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(17) {
+.works .works-wrapper li a.inview p span:nth-child(17) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 5.1s;
@@ -724,7 +739,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(18) {
+.works .works-wrapper li a.inview p span:nth-child(18) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 5.4s;
@@ -737,7 +752,7 @@ header .mainCopy h1 span {
   font-weight: bold;
 }
 
-.works .works-wrapper li a:hover p span:nth-child(19) {
+.works .works-wrapper li a.inview p span:nth-child(19) {
   color: red;
   display: inline-block;
   -webkit-transition-delay: 5.7s;
@@ -1077,7 +1092,7 @@ header .mainCopy h1 span {
   * {
     font-size: 18px;
   }
-  .responsive-flex, .works .works-wrapper li a .flex-box, .skills .skill-wrapper .each-skill dd, .about .flex-box {
+  .responsive-flex, .skills .skill-wrapper .each-skill dd, .about .flex-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1112,7 +1127,7 @@ header .mainCopy h1 span {
   * {
     font-size: 16px;
   }
-  .responsive-flex, .works .works-wrapper li a .flex-box, .skills .skill-wrapper .each-skill dd, .about .flex-box {
+  .responsive-flex, .skills .skill-wrapper .each-skill dd, .about .flex-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1125,12 +1140,6 @@ header .mainCopy h1 span {
   }
   .navMenu ul li a {
     font-size: 18px;
-  }
-  .work-img {
-    height: 300px;
-  }
-  .work-img img {
-    height: 300px;
   }
   .section-heading {
     font-size: 1.5rem;

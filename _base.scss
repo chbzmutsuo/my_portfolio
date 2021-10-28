@@ -2,8 +2,6 @@
 @import "example";
 @import url("https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Roboto:ital,wght@1,100;1,300;1,400;1,500&display=swap");
 
-
-
 // @media (min-width: 960px) {
 //   @import "breakpoints/960up";
 // }
@@ -11,9 +9,6 @@
 // @media (min-width: 1280px) {
 //   @import "breakpoints/1280up";
 // }
-
-
-
 
 * {
   font-family: "Hina Mincho", serif;
@@ -44,7 +39,6 @@ a {
   }
 }
 
-
 //extends-----------------
 .center {
   width: 100%;
@@ -61,7 +55,6 @@ a {
 .marginBottom {
   margin-bottom: 100px;
 }
-
 
 .responsive-flex {
   display: flex;
@@ -80,11 +73,12 @@ a {
 //extends_end-----------------
 
 #nav_top {
-  opacity: .5;
+  opacity: 0.7;
   cursor: pointer;
   text-align: center;
   position: fixed;
-  bottom: 5%; right: 10%;
+  bottom: 5%;
+  right: 10%;
   border-radius: 3px;
   font-size: 1.2rem;
   z-index: 50;
@@ -138,7 +132,7 @@ header {
       a {
         font-size: 25px;
         font-weight: bold;
-        &:hover{
+        &:hover {
           color: red;
         }
       }
@@ -226,10 +220,12 @@ header {
     text-align: center;
     li {
       flex-basis: 50%;
-      border: 2px groove darkgrey;
+      border: 1px solid darkgrey;
       padding: 2%;
-      margin-bottom: 30px;
+      margin: auto;
+      margin-bottom: 30px ;
       overflow: hidden;
+        max-width: 750px;
       .cp_btn {
         margin: 30px auto;
         width: 100px;
@@ -238,24 +234,28 @@ header {
       a {
         margin: 0 auto;
         padding: 0;
-        .flex-box {
-          @extend .responsive-flex;
-        }
         .work-img {
-          max-height: 400px;
-          flex-basis: 50%;
           position: relative;
           overflow: hidden;
-          border: 1px double darkgrey;
+          max-height: 550px;
+          max-width: 750px;
+          // border: 1px double darkgrey;
+          margin: 0 auto;
+          box-shadow: 10px 10px 10px darkgrey;
+
+          &:hover {
+            opacity: 0.7;
+            transition: 0.3s;
+          }
           img {
-            height: 100%;
             padding: 4px;
-            box-shadow: 5px 5px 5px darkgrey;
+            vertical-align: middle;
+            display: inline;
           }
           h3 {
             display: inline;
             width: 100%;
-            top: 50%;
+            top: 0;
             left: 0;
             position: absolute;
             font-size: 1.5rem;
@@ -278,36 +278,40 @@ header {
         }
         p {
           padding: 0 20px;
-          flex-basis: 50%;
-          text-align: left;
+          font-size: 0.8rem;
+          // text-align: left;
         }
 
         //<a>がホバーした時
-        &:hover {
+        &.inview {
           .work-img {
             img {
               transform: scale(1.2);
               transition: 0.7s;
             }
             h3 {
-              opacity: 1;
               animation-name: left_to_right;
-              animation-duration: 0.9s;
+              animation-delay: 0.7s;
+              animation-duration: 1.5s;
               animation-timing-function: ease-out;
+              animation-fill-mode: both;
+
               @keyframes left_to_right {
                 from {
+                  opacity: 1;
                   transform: translateX(-100%);
                 }
                 40% {
                   transform: translateX(50%);
                 }
-                to {
+                70% {
                   transform: translateX(0);
                 }
+                to {
+                  opacity: 1;
+                  top: 0;
+                }
               }
-            }
-            .box {
-              display: block;
             }
           }
 
@@ -339,7 +343,7 @@ header {
     @extend .center;
   }
   .skill-wrapper {
-    padding:0;
+    padding: 0;
     .each-skill {
       position: relative;
       &::after {
@@ -485,7 +489,7 @@ header {
           text-align: center;
         }
       }
-      td:nth-child(1){
+      td:nth-child(1) {
         width: 80px;
       }
     }
