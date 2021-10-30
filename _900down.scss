@@ -1,8 +1,8 @@
-*{
+* {
   font-size: 18px;
 }
 
-.responsive-flex{
+.responsive-flex {
   flex-direction: column;
 }
 .contentWidth {
@@ -10,33 +10,33 @@
   margin: 0 5% auto;
 }
 
-.each-work{
-  a:nth-child(1){
-    pointer-events:none;
+.each-work {
+  pointer-events: none;
+  a:nth-child(2) {
+    pointer-events:all;
   }
 }
 
-.skill-description{
+.skill-description {
   width: 100%;
   margin: 20px auto;
   line-height: 35px;
   font-size: larger;
 }
-.skill-img{
-  padding:0 !important;
+.skill-img {
+  padding: 0 !important;
   margin: auto;
-  img{
+  img {
     // height: 300px;
     width: 400px;
   }
 }
 
-.skill-name{
-  span{
+.skill-name {
+  span {
     font-size: 2rem;
     text-align: center;
     display: block;
     margin-bottom: 20px;
   }
 }
-

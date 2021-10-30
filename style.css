@@ -419,6 +419,10 @@ header .mainCopy h1 span {
   transition: 0.3s;
 }
 
+.works .works-wrapper li a .work-img .gif {
+  display: none;
+}
+
 .works .works-wrapper li a .work-img img {
   vertical-align: middle;
   display: inline;
@@ -1089,8 +1093,11 @@ header .mainCopy h1 span {
     width: 90%;
     margin: 0 5% auto;
   }
-  .each-work a:nth-child(1) {
+  .each-work {
     pointer-events: none;
+  }
+  .each-work a:nth-child(2) {
+    pointer-events: all;
   }
   .skill-description {
     width: 100%;

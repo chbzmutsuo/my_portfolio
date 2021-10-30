@@ -7,19 +7,20 @@ const obj = {};
 gif_switchers.forEach((gif) => {
   gif.addEventListener("mouseenter", function () {
     const height = this.height;
-    // alert(height)
-    const file_name = String(this.src).slice(0, -3);
-    const png = `${file_name}png`;
-    const gif = `${file_name}gif`;
-    this.src = gif;
-    this.height = height + 8;
-  });
+    // const file_name = String(this.src).slice(0, -3);
+    // const png = `${file_name}png`;
+    // const gif = `${file_name}gif`;
+    // this.src = gif;
+    // let gif = document.querySelector(".gif");
+    let gif = this.nextElementSibling;
 
-  gif.addEventListener("mouseout", function () {
-    const file_name = String(this.src).slice(0, -3);
-    const png = `${file_name}png`;
-    const gif = `${file_name}gif`;
-    this.src = png;
+    //gifを表示し
+    gif.style.display ="block";
+
+    //元々のpngを消す。
+    this.style.display ="none"
+    gif.height = height + 8;
+
   });
 });
 
@@ -36,7 +37,7 @@ nav_items.forEach((item) => {
   // let nav_menu = document.querySelector(`#nav_${nav_items[item]}`);
   let target = document.querySelector(`#${item}_pos`);
 
-  let target_position = target.getBoundingClientRect().top  + window.scrollY;
+  let target_position = target.getBoundingClientRect().top + window.scrollY;
   console.log(window.scrollY);
   console.log(target_position);
 
