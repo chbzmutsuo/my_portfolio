@@ -2,33 +2,30 @@
 let gif_switchers = document.querySelectorAll(".gif_switcher");
 console.log(gif_switchers);
 
-const obj = {}
+const obj = {};
 
 gif_switchers.forEach((gif) => {
-  // obj["png"] =gif.src
-  // obj["gif"]=String(gif.src).replace("png","gif");
-  // obj["file_name"] = gif.src.slice(0, -3);
-  // console.log(obj)
   gif.addEventListener("mouseenter", function () {
     const height = this.height;
     // alert(height)
     const file_name = String(this.src).slice(0, -3);
-    const png = `${file_name}png`
-    const gif = `${file_name}gif`
-    this.src = gif
+    const png = `${file_name}png`;
+    const gif = `${file_name}gif`;
+    this.src = gif;
     this.height = height + 8;
   });
 
   gif.addEventListener("mouseout", function () {
     const file_name = String(this.src).slice(0, -3);
-    const png = `${file_name}png`
-    const gif = `${file_name}gif`
-    this.src = png
+    const png = `${file_name}png`;
+    const gif = `${file_name}gif`;
+    this.src = png;
   });
 });
 
 //スムーススクロール----------------------------
 //クリックイベントを追加するボタン
+// document.addEventListener("DOMContentLoaded", () => {
 let nav_items = ["top", "works", "skills", "history", "contact"];
 
 //nav_itemsに対して繰り返し構文
@@ -38,7 +35,9 @@ nav_items.forEach((item) => {
   // console.log(nav_menu);
   // let nav_menu = document.querySelector(`#nav_${nav_items[item]}`);
   let target = document.querySelector(`#${item}_pos`);
-  let target_position = target.getBoundingClientRect().top;
+
+  let target_position = target.getBoundingClientRect().top  + window.scrollY;
+  console.log(window.scrollY);
   console.log(target_position);
 
   nav_menu.addEventListener("click", () => {
@@ -54,9 +53,14 @@ nav_items.forEach((item) => {
     });
   };
 });
+
+// });
+
 //スムーススクロール----------------------------
 
+//スクロールアニメーション--------------
 /**
+ *
  * scroll animation
  * .io_animationクラスのものにinviewがつく
  */
@@ -98,15 +102,4 @@ modal_close.addEventListener("click", () => {
   container.style = "opacity:1";
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const el = document.querySelector("#works");
-//   const str = el.innerHTML.trim().split("");
-
-//   let concatStr = str.reduce(function (acc, curr) {
-//     curr = curr.replace(/\s+/, "&nbsp");
-//     return `${acc}<span class="char">${curr}</span>`;
-//   }, "");
-
-//   console.log(concatStr);
-//   el.innerHTML = concatStr;
-// });
+//スクロールアニメーション--------------

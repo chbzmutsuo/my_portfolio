@@ -231,6 +231,7 @@ header .mainCopy h1 span {
 }
 
 .navMenu {
+  height: 50px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -408,8 +409,8 @@ header .mainCopy h1 span {
   max-width: 750px;
   margin: 0 auto;
   border-radius: 20px;
-  -webkit-box-shadow: 10px 10px 10px darkgrey;
-          box-shadow: 10px 10px 10px darkgrey;
+  -webkit-box-shadow: 5px 5px 5px darkgrey;
+          box-shadow: 5px 5px 5px darkgrey;
 }
 
 .works .works-wrapper li a .work-img:hover {
@@ -419,7 +420,6 @@ header .mainCopy h1 span {
 }
 
 .works .works-wrapper li a .work-img img {
-  padding: 4px;
   vertical-align: middle;
   display: inline;
 }
@@ -455,13 +455,15 @@ header .mainCopy h1 span {
 }
 
 .works .works-wrapper li a.inview .work-img img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 1s 1s;
+  transition: 1s 1s;
+  -webkit-transform: translateY(1.6rem);
+          transform: translateY(1.6rem);
 }
 
 .works .works-wrapper li a.inview .work-img .work-title {
+  font-size: 1.5rem;
+  height: 1.8rem;
   -webkit-animation-name: left_to_right;
           animation-name: left_to_right;
   -webkit-animation-delay: 0.7s;
@@ -1086,6 +1088,9 @@ header .mainCopy h1 span {
   .contentWidth, #container {
     width: 90%;
     margin: 0 5% auto;
+  }
+  .each-work a:nth-child(1) {
+    pointer-events: none;
   }
   .skill-description {
     width: 100%;

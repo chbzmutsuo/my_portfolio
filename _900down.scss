@@ -10,6 +10,11 @@
   margin: 0 5% auto;
 }
 
+.each-work{
+  a:nth-child(1){
+    pointer-events:none;
+  }
+}
 
 .skill-description{
   width: 100%;
