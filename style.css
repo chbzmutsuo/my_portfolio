@@ -423,11 +423,6 @@ header .mainCopy h1 span {
   display: none;
 }
 
-.works .works-wrapper li a .work-img img {
-  vertical-align: middle;
-  display: inline;
-}
-
 .works .works-wrapper li a .work-img .work-title {
   display: inline;
   width: 100%;

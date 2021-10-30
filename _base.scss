@@ -246,8 +246,6 @@ header {
         margin: 0 auto;
         padding: 0;
 
-        
-
         .work-img {
           position: relative;
           overflow: hidden;
@@ -262,15 +260,17 @@ header {
             opacity: 0.7;
             transition: 0.3s;
           }
+
           .gif{
             display: none;
           }
+          
 
           img {
             // transform: scale(.8);
-            vertical-align: middle;
-            display: inline;
+            // display: inline;
           }
+
           .work-title {
             display: inline;
             width: 100%;;
